@@ -1,0 +1,12 @@
+import Banner from "./Banner";
+
+function Cards() {
+    return (
+        <>
+            <Banner></Banner>
+            <h1>Title Cards</h1>
+        </>
+    );
+}
+
+export default Cards;

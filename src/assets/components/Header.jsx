@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
-
+import logo from "../img/logo_desktop.svg";
+import Navigation from "./Navigation";
+import styles from "../styles/Header.module.scss";
 function Header() {
     return (
-        <nav>
-            <img src="/p" alt="" />
+        <header className={styles.header}>
+            <img src={logo} alt="Logo Kasa" />
 
-            <NavLink to="/home">Accueil</NavLink>
-            <NavLink to="/about">À propos</NavLink>
-        </nav>
+            <Navigation className={styles.navigation}></Navigation>
+        </header>
     );
 }
 
