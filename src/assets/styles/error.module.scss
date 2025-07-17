@@ -1,0 +1,26 @@
+@use "./_styles.scss" as *;
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 40.5em;
+    background-color: $main-text-color;
+    padding: 5em;
+
+    h2 {
+        color: $main-color;
+        font-size: 12.5em;
+    }
+
+    p {
+        color: $main-color;
+        font-size: 1.6em;
+        font-weight: 500;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
