@@ -1,0 +1,26 @@
+.contenair {
+    width: 100%;
+    height: auto;
+    background-color: lightgrey;
+}
+
+.card {
+    width: 18em;
+    height: 20em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.7em;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    h4 {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        color: white;
+    }
+}

@@ -7,6 +7,7 @@ import Footer from "./assets/components/Footer";
 import Error from "./assets/components/Error";
 import TagName from "./assets/components/TagName";
 import DropDown from "./assets/components/DropDown";
+import Cards from "./assets/components/Cards";
 
 function App() {
     return (
@@ -14,7 +15,6 @@ function App() {
             <Header></Header>
             <Banner></Banner>
             <Footer></Footer>
-            <DropDown></DropDown>
         </>
     );
 }
