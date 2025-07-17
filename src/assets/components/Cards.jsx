@@ -4,7 +4,7 @@ function Cards() {
     return (
         <>
             <Banner></Banner>
-            <h1>Title Cards</h1>
+            {/* <h1>Title Cards</h1> */}
         </>
     );
 }
