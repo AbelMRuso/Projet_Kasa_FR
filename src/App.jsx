@@ -6,15 +6,15 @@ import Banner from "./assets/components/Banner";
 import Footer from "./assets/components/Footer";
 import Error from "./assets/components/Error";
 import TagName from "./assets/components/TagName";
+import DropDown from "./assets/components/DropDown";
 
 function App() {
     return (
         <>
             <Header></Header>
             <Banner></Banner>
-
             <Footer></Footer>
-            <TagName></TagName>
+            <DropDown></DropDown>
         </>
     );
 }
