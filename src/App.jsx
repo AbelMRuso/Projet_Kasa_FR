@@ -1,19 +1,23 @@
 import { useState } from "react";
 import "./assets/components/Header";
-import logements from "./assets/data/logements.json";
+
+import Home from "./pages/Home";
+import Error404 from "./pages/Error404";
+import About from "./pages/About";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Header from "./assets/components/Header";
-import Banner from "./assets/components/Banner";
 import Footer from "./assets/components/Footer";
-import Error from "./assets/components/Error";
-import TagName from "./assets/components/TagName";
-import DropDown from "./assets/components/DropDown";
-import Cards from "./assets/components/Cards";
 
 function App() {
     return (
         <>
             <Header></Header>
-            <Banner></Banner>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<Error404 />} />
+            </Routes>
             <Footer></Footer>
         </>
     );

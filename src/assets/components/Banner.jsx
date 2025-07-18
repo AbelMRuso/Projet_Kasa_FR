@@ -1,11 +1,11 @@
-import banner from "../img/image_banner.svg";
+import defaultImage from "../img/image_banner.svg";
 import styles from "../styles/banner.module.scss";
 
-function Banner() {
+function Banner({ image = defaultImage, text }) {
     return (
         <div className={styles.bannerContenair}>
-            <p>Chez vous, partout et ailleurs</p>
-            <img src={banner} alt="Falaise végétalisée et mer déchaînée" />
+            {text && <p>{text}</p>}
+            <img src={image} alt="Falaise végétalisée et mer déchaînée" />
         </div>
     );
 }
