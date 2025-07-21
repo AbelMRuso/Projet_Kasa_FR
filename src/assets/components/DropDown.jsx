@@ -7,22 +7,21 @@ function DropDown({ title, description, equipments }) {
 
     return (
         <section>
-            <div className={styles.menuClose}>
+            <div className={styles.headline}>
                 <h3>{title}</h3>
                 <button onClick={() => setIsOpen(!isOpen)}>
-                    <img src={arrowDown} alt="Ouvrir menu" />
+                    <img src={arrowDown} alt="Ouvrir menu" className={isOpen ? styles.arrowUp : ""} />
                 </button>
-                <div className={styles.description}>
-                    {isOpen && (
-                        <div>
-                            <p>{description}</p>
-                            <ul>
-                                <li>{equipments}</li>
-                            </ul>
-                        </div>
-                    )}
-                </div>
             </div>
+
+            {isOpen && (
+                <div className={styles.description}>
+                    <p>{description}</p>
+                    <ul>
+                        <li>{equipments}</li>
+                    </ul>
+                </div>
+            )}
         </section>
     );
 }

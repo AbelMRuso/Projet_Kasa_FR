@@ -3,15 +3,17 @@ section {
     flex-direction: column;
     width: 100%;
     margin: 2em 0;
+    background-color: #f6f6f673;
+    border-radius: 0.6em;
+
+    position: relative;
 }
 
 ul {
     list-style: none;
 }
 
-.menuClose {
-    position: relative;
-    margin-top: 3em;
+.headline {
     color: white;
     background-color: #ff6060;
     padding: 0.8em;
@@ -20,6 +22,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    z-index: 2;
 
     button {
         all: unset;
@@ -28,10 +31,13 @@ ul {
 }
 
 .description {
-    position: absolute;
-    left: 0;
-    top: 3em;
-    background-color: #f6f6f673;
     text-align: left;
-    padding: 1.5em 0.8em 0.8em 0.8em;
+    padding: 0.8em;
+    position: relative;
+    z-index: 1;
+}
+
+.arrowUp {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
 }
