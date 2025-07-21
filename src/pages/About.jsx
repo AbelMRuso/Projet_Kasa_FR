@@ -6,10 +6,15 @@ function About() {
     return (
         <>
             <Banner image={imgBannerAbout}></Banner>
-            <DropDown></DropDown>
-            <DropDown></DropDown>
-            <DropDown></DropDown>
-            <DropDown></DropDown>
+            <DropDown
+                title={"Fiabilité"}
+                description={
+                    "Les annonces postées sur Kasa farantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont réguilièrement vérifiées par nos équipes"
+                }
+            ></DropDown>
+            <DropDown title={"Respect"}></DropDown>
+            <DropDown title={"Service"}></DropDown>
+            <DropDown title={"Sécurité"}></DropDown>
         </>
     );
 }

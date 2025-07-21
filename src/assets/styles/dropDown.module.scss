@@ -2,32 +2,36 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 2em 0;
 }
 
 ul {
-    padding: 1.2em 1em;
-    text-align: left;
     list-style: none;
-    background-color: #f6f6f673;
-    width: 100%;
-    margin-top: -0.4em;
-    border-radius: 0 0 0.6em 0.6em;
 }
 
 .menuClose {
+    position: relative;
     margin-top: 3em;
     color: white;
     background-color: #ff6060;
-    padding: 0.7em;
+    padding: 0.8em;
     border-radius: 0.6em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    z-index: 2;
 
     button {
         all: unset;
         cursor: pointer;
     }
+}
+
+.description {
+    position: absolute;
+    left: 0;
+    top: 3em;
+    background-color: #f6f6f673;
+    text-align: left;
+    padding: 1.5em 0.8em 0.8em 0.8em;
 }
