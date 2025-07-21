@@ -11,7 +11,7 @@
 
 .card {
     margin: 1em;
-    width: 90%;
+    width: auto;
     height: 22em;
     position: relative;
     overflow: hidden;
@@ -23,12 +23,14 @@
         height: 100%;
     }
 
-    h4 {
+    h2 {
         position: absolute;
         bottom: 1em;
         left: 1em;
         color: white;
         text-align: left;
+        font-size: 1.2em;
         width: 50%;
+        text-shadow: 0.1em 0.1em 0.2em black;
     }
 }

@@ -8,7 +8,7 @@ function Cards() {
                 return (
                     <article className={styles.card}>
                         <img src={logement.cover} alt={logement.title} />
-                        <h4>{logement.title}</h4>
+                        <h2>{logement.title}</h2>
                     </article>
                 );
             })}
@@ -17,3 +17,7 @@ function Cards() {
 }
 
 export default Cards;
+
+/*  - AJOUTER KEY (ID) À CHAQUE ARTICLE
+    - IMPORTER NAVLINK 
+    - AJOUTER UNE NAVLINK TO À CHACHE CARTE AVEC SON ID */
