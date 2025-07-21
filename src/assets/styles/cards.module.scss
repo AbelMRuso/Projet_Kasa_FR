@@ -1,12 +1,18 @@
-.contenair {
+.gallery {
+    background-color: #f6f6f673;
     width: 100%;
-    height: auto;
-    background-color: lightgrey;
+    padding: 1em 1em;
+    border-radius: 1em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2em 0;
 }
 
 .card {
-    width: 18em;
-    height: 20em;
+    margin: 1em;
+    width: 90%;
+    height: 22em;
     position: relative;
     overflow: hidden;
     border-radius: 0.7em;
@@ -22,5 +28,7 @@
         bottom: 1em;
         left: 1em;
         color: white;
+        text-align: left;
+        width: 50%;
     }
 }
