@@ -1,7 +1,10 @@
+main {
+    margin: 2em 0;
+}
+
 .carrousel {
     width: 100%;
     height: 32em;
-    padding: 0 2em;
     position: relative;
 
     img {
@@ -39,4 +42,50 @@ button {
     position: absolute;
     top: 0;
     right: 4em;
+}
+
+.contenairInfo {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    h1 {
+        color: #ff6060;
+    }
+    h2 {
+        font-size: 1em;
+    }
+}
+
+.contenairHost {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+
+    img {
+        border-radius: 50%;
+        width: 6em;
+        object-fit: cover;
+        display: block;
+    }
+
+    p {
+        width: 6em;
+    }
+}
+
+.contenairTagRate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag {
+    display: flex;
+    gap: 0.8em;
+}
+
+.dropDown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6em;
 }

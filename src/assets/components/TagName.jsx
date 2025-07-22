@@ -1,7 +1,7 @@
 import styles from "../styles/tag.module.scss";
 
-function TagName() {
-    return <p className={styles.tag}>tag-name</p>;
+function TagName(text) {
+    return <p className={styles.tag}></p>;
 }
 
 export default TagName;
