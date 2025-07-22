@@ -1,23 +1,31 @@
 import arrowDown from "../img/arrow_down.svg";
 import styles from "../styles/dropDown.module.scss";
+import { useState } from "react";
 
-function DropDown() {
+function DropDown({ title, description, equipments }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <section>
-            <div className={styles.menuClose}>
-                <h3>Title section</h3>
-                <button>
-                    <img src={arrowDown} alt="Ouvrir menu" />
+            <div className={styles.headline}>
+                <h3>{title}</h3>
+                <button onClick={() => setIsOpen(!isOpen)}>
+                    <img src={arrowDown} alt="Ouvrir menu" className={isOpen ? styles.arrowUp : ""} />
                 </button>
             </div>
-            <ul>
-                <li>Tag 1</li>
-                <li>Tag 2</li>
-                <li>tag 3</li>
-                <li>Tag 4</li>
-            </ul>
+
+            {isOpen && (
+                <div className={styles.description}>
+                    <p>{description}</p>
+                    <ul>
+                        <li>{equipments}</li>
+                    </ul>
+                </div>
+            )}
         </section>
     );
 }
 
 export default DropDown;
+
+/* AJOUTER UN .MAP() POUR RECUPERER LES EQUIPEMENTS DE L'ARRAY DATA DANS LA BALISE UL */
