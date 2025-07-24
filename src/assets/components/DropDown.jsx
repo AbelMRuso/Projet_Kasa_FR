@@ -2,7 +2,7 @@ import arrowDown from "../img/arrow_down.svg";
 import styles from "../styles/dropDown.module.scss";
 import { useState } from "react";
 
-function DropDown({ title, description, equipments }) {
+function DropDown({ title, description, equipments = [] }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -16,10 +16,14 @@ function DropDown({ title, description, equipments }) {
 
             {isOpen && (
                 <div className={styles.description}>
-                    <p>{description}</p>
-                    <ul>
-                        <li>{equipments}</li>
-                    </ul>
+                    {description && <p>{description}</p>}
+                    {equipments.length > 0 && (
+                        <ul>
+                            {equipments.map((equipement, index) => (
+                                <li key={index}>{equipement}</li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             )}
         </section>
@@ -27,5 +31,3 @@ function DropDown({ title, description, equipments }) {
 }
 
 export default DropDown;
-
-/* AJOUTER UN .MAP() POUR RECUPERER LES EQUIPEMENTS DE L'ARRAY DATA DANS LA BALISE UL */

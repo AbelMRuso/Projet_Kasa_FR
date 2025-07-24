@@ -41,8 +41,8 @@ function FicheLogement() {
                     </div>
                 </div>
                 <div className={styles.dropDown}>
-                    <DropDown></DropDown>
-                    <DropDown></DropDown>
+                    <DropDown title={"Description"} description={logement.description}></DropDown>
+                    <DropDown title={"Équipements"} equipments={logement.equipments}></DropDown>
                 </div>
             </div>
         </main>
