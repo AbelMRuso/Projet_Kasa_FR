@@ -1,9 +1,9 @@
 import arrowBack from "../img/arrow_back.svg";
 import arrowForward from "../img/arrow_forward.svg";
-import styles from "../styles/logements.module.scss";
+import styles from "../styles/slideShow.module.scss";
 import data from "../data/logements.json";
 import { useState } from "react";
-import { useParams } from "react-router-dom"; //se usa para recuperar la id de la url
+import { useParams } from "react-router-dom";
 
 function SlideShow() {
     const { id } = useParams();
@@ -40,7 +40,6 @@ function SlideShow() {
                     </button>
                 </>
             )}
-            ;
         </div>
     );
 }

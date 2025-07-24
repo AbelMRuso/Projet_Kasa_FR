@@ -4,9 +4,12 @@ import star from "../assets/img/star_active.png";
 import DropDown from "../assets/components/DropDown";
 import SlideShow from "../assets/components/SlideShow";
 import data from "../assets/data/logements.json";
+import { useParams } from "react-router-dom";
 
 function FicheLogement() {
-    let hostProfile = data[2].host.picture;
+    const { id } = useParams();
+    const logement = data.find((item) => item.id === id);
+
     return (
         <main>
             <div>
@@ -16,13 +19,13 @@ function FicheLogement() {
             <div>
                 <div className={styles.contenairInfo}>
                     <div>
-                        <h1>Cozy loft on the Canaal Saint-Martin</h1>
-                        <h2>Paris, Île-de-France</h2>
+                        <h1>{logement.title}</h1>
+                        <h2>{logement.location}</h2>
                     </div>
 
                     <div className={styles.contenairHost}>
-                        <p>Nathalie Jean</p>
-                        <img src={hostProfile} alt="" />
+                        <p>{logement.host.name}</p>
+                        <img src={logement.host.picture} alt="" />
                     </div>
                 </div>
                 <div className={styles.contenairTagRate}>
