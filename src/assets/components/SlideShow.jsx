@@ -13,11 +13,11 @@ function SlideShow() {
 
     return (
         <div className={styles.carrousel}>
-            <img key={showImage} src={logement.pictures[showImage]} alt="" />
+            <img className={styles.carrouselImg} key={showImage} src={logement.pictures[showImage]} alt="" />
 
             <p>1/4</p>
 
-            <button className={styles.buttonLeft}>
+            <button onClick={() => setshowImage((showImage - 1 + logement.pictures.length) % logement.pictures.length)} className={styles.buttonLeft}>
                 <img src={arrowBack} alt="" />
             </button>
             <button
