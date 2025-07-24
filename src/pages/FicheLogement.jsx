@@ -31,8 +31,6 @@ function FicheLogement() {
                 <div className={styles.contenairTagRate}>
                     <div className={styles.tag}>
                         <TagName></TagName>
-                        <TagName></TagName>
-                        <TagName></TagName>
                     </div>
                     <div>
                         <img src={star} alt="" />
