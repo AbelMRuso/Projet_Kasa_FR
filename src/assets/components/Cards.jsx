@@ -7,8 +7,8 @@ function Cards() {
         <section className={styles.gallery}>
             {data.map((logement) => {
                 return (
-                    <NavLink to={`/logements/${logement.id}`}>
-                        <article className={styles.card} key={logement.id}>
+                    <NavLink key={logement.id} to={`/logements/${logement.id}`}>
+                        <article className={styles.card}>
                             <img src={logement.cover} alt={logement.title} />
                             <h2>{logement.title}</h2>
                         </article>
