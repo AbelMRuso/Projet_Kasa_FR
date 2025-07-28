@@ -16,7 +16,7 @@ function FicheLogement() {
     return (
         <main>
             <div>
-                <SlideShow></SlideShow>
+                <SlideShow pictures={logement.pictures}></SlideShow>
             </div>
 
             <div>
@@ -33,7 +33,7 @@ function FicheLogement() {
                 </div>
                 <div className={styles.contenairTagRate}>
                     <div className={styles.tag}>
-                        <TagName></TagName>
+                        <TagName tags={logement.tags}></TagName>
                     </div>
                     <div className={styles.stars}>
                         {[...Array(5)].map((_, index) => (
