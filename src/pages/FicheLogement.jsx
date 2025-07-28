@@ -5,11 +5,22 @@ import emptyStar from "../assets/img/star_inactive.png";
 import DropDown from "../assets/components/DropDown";
 import SlideShow from "../assets/components/SlideShow";
 import data from "../assets/data/logements.json";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Error404 from "./Error404";
 
 function FicheLogement() {
     const { id } = useParams();
     const logement = data.find((item) => item.id === id);
+
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!logement) {
+            navigate("/error404");
+        }
+    }, [logement, navigate]);
+
+    if (!logement) return null; // linea que evita que se intente renderizar el contenido proviniente de data cuando logement es undefined
 
     const rating = parseInt(logement.rating);
 
