@@ -11,7 +11,7 @@ function Address() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/logements/:id" element={<FicheLogement />} />
-            <Route path="logements/error404" element={<Error404 />} />
+            <Route path="/error404" element={<Error404 />} />
             <Route path="*" element={<Error404 />} />
         </Routes>
     );
