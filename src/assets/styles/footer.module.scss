@@ -14,3 +14,9 @@ footer {
         color: white;
     }
 }
+
+@media (max-width: 768px) {
+    .lineBreak {
+        display: block;
+    }
+}
