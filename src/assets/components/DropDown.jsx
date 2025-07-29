@@ -6,7 +6,7 @@ function DropDown({ title, description, equipments = [] }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section>
+        <article>
             <div className={styles.headline}>
                 <h3>{title}</h3>
                 <button onClick={() => setIsOpen(!isOpen)}>
@@ -26,7 +26,7 @@ function DropDown({ title, description, equipments = [] }) {
                     )}
                 </div>
             )}
-        </section>
+        </article>
     );
 }
 

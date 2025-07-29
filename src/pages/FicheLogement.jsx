@@ -7,7 +7,6 @@ import SlideShow from "../assets/components/SlideShow";
 import data from "../assets/data/logements.json";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import Error404 from "./Error404";
 
 function FicheLogement() {
     const { id } = useParams();
