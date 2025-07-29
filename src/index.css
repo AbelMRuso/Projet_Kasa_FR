@@ -28,3 +28,9 @@ body,
     background-color: white;
     color: #333;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}

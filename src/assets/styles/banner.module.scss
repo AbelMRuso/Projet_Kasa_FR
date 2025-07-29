@@ -31,6 +31,7 @@
     }
 }
 
+// styles pour le banner sur la page About
 .bannerAbout {
     width: 100%;
     height: 16em;
@@ -50,5 +51,22 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .bannerContenair {
+        width: 100%;
+        height: 8em;
+
+        h1 {
+            width: 100%;
+            top: 2em;
+            text-align: left;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding-left: 1em;
+            padding-right: 8.3em;
+        }
     }
 }
