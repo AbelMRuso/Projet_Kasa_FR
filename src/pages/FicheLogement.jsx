@@ -40,7 +40,7 @@ function FicheLogement() {
                             <TagName tags={logement.tags}></TagName>
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.contenairStarHost}>
                         <div className={styles.contenairHost}>
                             <p>{logement.host.name}</p>
                             <img src={logement.host.picture} alt="" />

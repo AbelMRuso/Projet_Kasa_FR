@@ -42,3 +42,18 @@ ul {
     transition: transform 0.3s ease;
     transform: rotate(180deg);
 }
+
+@media (max-width: 768px) {
+    article {
+        margin: 0.4em;
+    }
+
+    .headline {
+        font-size: 0.8em;
+        padding: 0 0.8em;
+    }
+
+    .description {
+        font-size: 0.7em;
+    }
+}

@@ -65,3 +65,56 @@ main {
 .contenair {
     margin: 2em 0em;
 }
+
+@media (max-width: 768px) {
+    .contenair {
+        margin-top: 1em;
+    }
+
+    .contenairInfo {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        color: #ff6060;
+        font-weight: 500;
+        font-size: 1.4em;
+        margin-bottom: 0.4em;
+    }
+    h2 {
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+
+    .contenairHost {
+        img {
+            width: 4em;
+        }
+    }
+
+    .contenairStarHost {
+        display: flex;
+        margin-top: 1.4em;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        .stars {
+            margin-top: 0;
+            height: 1.6em;
+        }
+    }
+
+    .tag {
+        width: 100%;
+        gap: 0.4em;
+        margin-top: 1em;
+    }
+
+    .dropDown {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.2em;
+    }
+}

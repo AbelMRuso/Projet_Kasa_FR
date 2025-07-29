@@ -10,3 +10,9 @@
     font-size: smaller;
     font-weight: 600;
 }
+
+@media (max-width: 768px) {
+    .tag {
+        font-size: 0.6em;
+    }
+}
