@@ -4,8 +4,12 @@ import styles from "../styles/header.module.scss";
 function Navigation() {
     return (
         <nav className={styles.navigation}>
-            <NavLink to="/">Accueil</NavLink>
-            <NavLink to="/about">À propos</NavLink>
+            <NavLink to="/" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
+                Accueil
+            </NavLink>
+            <NavLink className={({ isActive }) => (isActive ? styles.activeLink : "")} to="/about">
+                À propos
+            </NavLink>
         </nav>
     );
 }
