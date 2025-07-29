@@ -8,7 +8,7 @@ function About() {
         <>
             <main>
                 <Banner image={imgBannerAbout}></Banner>
-                <section>
+                <section className={styles.querry}>
                     <DropDown
                         title={"Fiabilité"}
                         description={
