@@ -8,7 +8,7 @@ function Navigation() {
                 Accueil
             </NavLink>
             <NavLink className={({ isActive }) => (isActive ? styles.activeLink : "")} to="/about">
-                À propos
+                A propos
             </NavLink>
         </nav>
     );

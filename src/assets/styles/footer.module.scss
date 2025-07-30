@@ -1,5 +1,7 @@
 footer {
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-bottom: calc(-50vw + 50%);
     height: 16em;
     background-color: black;
     display: flex;
@@ -10,5 +12,11 @@ footer {
 
     p {
         color: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .lineBreak {
+        display: block;
     }
 }

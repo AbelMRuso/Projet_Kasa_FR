@@ -11,7 +11,7 @@ function SlideShow({ pictures }) {
             <img className={styles.carrouselImg} key={showImage} src={pictures[showImage]} alt="" />
             {pictures.length > 1 && (
                 <>
-                    <p>
+                    <p className={styles.hidden}>
                         {showImage + 1}/{pictures.length}
                     </p>
 

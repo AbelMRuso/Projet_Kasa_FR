@@ -2,11 +2,11 @@ import arrowDown from "../img/arrow_down.svg";
 import styles from "../styles/dropDown.module.scss";
 import { useState } from "react";
 
-function DropDown({ title, description, equipments = [] }) {
+function DropDown({ title, description = "", equipments = [] }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section>
+        <article>
             <div className={styles.headline}>
                 <h3>{title}</h3>
                 <button onClick={() => setIsOpen(!isOpen)}>
@@ -14,19 +14,17 @@ function DropDown({ title, description, equipments = [] }) {
                 </button>
             </div>
 
-            {isOpen && (
-                <div className={styles.description}>
-                    {description && <p>{description}</p>}
-                    {equipments.length > 0 && (
-                        <ul>
-                            {equipments.map((equipement, index) => (
-                                <li key={index}>{equipement}</li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            )}
-        </section>
+            <div className={`${styles.description} ${isOpen ? styles.descriptionOpen : styles.descriptionClosed}`}>
+                {description && <p>{description}</p>}
+                {equipments.length > 0 && (
+                    <ul>
+                        {equipments.map((equipement, index) => (
+                            <li key={index}>{equipement}</li>
+                        ))}
+                    </ul>
+                )}
+            </div>
+        </article>
     );
 }
 

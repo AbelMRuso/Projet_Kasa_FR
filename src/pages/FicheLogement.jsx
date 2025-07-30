@@ -7,7 +7,6 @@ import SlideShow from "../assets/components/SlideShow";
 import data from "../assets/data/logements.json";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import Error404 from "./Error404";
 
 function FicheLogement() {
     const { id } = useParams();
@@ -30,26 +29,28 @@ function FicheLogement() {
                 <SlideShow pictures={logement.pictures}></SlideShow>
             </div>
 
-            <div>
+            <div className={styles.contenair}>
                 <div className={styles.contenairInfo}>
                     <div>
-                        <h1>{logement.title}</h1>
-                        <h2>{logement.location}</h2>
+                        <div>
+                            <h1>{logement.title}</h1>
+                            <h2>{logement.location}</h2>
+                        </div>
+                        <div className={styles.tag}>
+                            <TagName tags={logement.tags}></TagName>
+                        </div>
                     </div>
+                    <div className={styles.contenairStarHost}>
+                        <div className={styles.contenairHost}>
+                            <p>{logement.host.name}</p>
+                            <img src={logement.host.picture} alt="" />
+                        </div>
 
-                    <div className={styles.contenairHost}>
-                        <p>{logement.host.name}</p>
-                        <img src={logement.host.picture} alt="" />
-                    </div>
-                </div>
-                <div className={styles.contenairTagRate}>
-                    <div className={styles.tag}>
-                        <TagName tags={logement.tags}></TagName>
-                    </div>
-                    <div className={styles.stars}>
-                        {[...Array(5)].map((_, index) => (
-                            <img key={index} src={index < rating ? star : emptyStar}></img>
-                        ))}
+                        <div className={styles.stars}>
+                            {[...Array(5)].map((_, index) => (
+                                <img key={index} src={index < rating ? star : emptyStar}></img>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className={styles.dropDown}>

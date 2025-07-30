@@ -4,7 +4,9 @@ function Footer() {
     return (
         <footer className={styles.footer}>
             <img src={logo} alt="" />
-            <p>© 2020 Kasa. All rights reserved</p>
+            <p>
+                © 2020 Kasa. All<span className={styles.lineBreak}>rights reserved</span>
+            </p>
         </footer>
     );
 }
