@@ -50,8 +50,9 @@ main {
 }
 
 .dropDown {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
+    align-items: start;
     gap: 4em;
 }
 
